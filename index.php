@@ -24,14 +24,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   <body>
     <div class="container">
         <form action="" method="POST" class="card mt-5 shadow" autocomplete="off">
-            <div class="card-header">PHP Calculator</div>
+            <div class="card-header">PHP Calculator In server</div>
             <div class="card-body p-4">
                 <label for="numberOne" class="form-label">Number 1</label>
                 <input type="number" name="numberOne" id="numberOne" class="form-control" required>
 
                 <label for="numberTwo" class="form-label mt-2">Number 2</label>
                 <input type="number" name="numberTwo" id="numberTwo" class="form-control" required>
-
                 <label for="operator" class="form-label mt-2">Select Operator</label>
                 <select name="operator" id="operator" class="form-select" required>
                     <option value="plus">+</option>
