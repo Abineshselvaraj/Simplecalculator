@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php
               }else{
                 ?>
-                Result will appear here! 
+                The final Result is! 
                <?php
               }
               ?>
