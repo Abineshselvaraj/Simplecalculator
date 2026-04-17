@@ -3,7 +3,7 @@ name: Simple PHP App Deployment (Test)
 on:
   push:
     branches:
-      - main  # change to main if needed
+      - main
 
 jobs:
   deploy:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Execute Deployment on Server
+      - name: Execute Deployment on Server
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -21,3 +21,15 @@ jobs:
            echo "===== Starting Deployment ====="
             bash /var/www/simple_calculator_PHP/deploy.sh 2>&1 | tee /var/www/simple_calculator_PHP/deploy.log
             echo "=====  Deployment Finished ====="
+
+      #  ADD THIS BLOCK FOR 2ND SERVER (no change above)
+      - name: Execute Deployment on Server 2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER2_HOST }}
+          username: root
+          key: ${{ secrets.SERVER2_SSH_KEY }}
+          script: |
+           echo "===== Starting Deployment (Server 2) ====="
+            bash /var/www/simple_calculator_PHP/deploy.sh 2>&1 | tee /var/www/simple_calculator_PHP/deploy.log
+            echo "===== Deployment Finished (Server 2) ====="
