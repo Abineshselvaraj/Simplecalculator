@@ -26,10 +26,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="" method="POST" class="card mt-5 shadow" autocomplete="off">
             <div class="card-header">PHP Calculator to the staging server 101</div>
             <div class="card-body p-4">
-                <label for="numberOne" class="form-label">Number 101</label>
+                <label for="numberOne" class="form-label">Number 00101</label>
                 <input type="number" name="numberOne" id="numberOne" class="form-control" required>
 
-                <label for="numberTwo" class="form-label mt-2">Number 202</label>
+                <label for="numberTwo" class="form-label mt-2">Number 00202</label>
                 <input type="number" name="numberTwo" id="numberTwo" class="form-control" required>
                 <label for="operator" class="form-label mt-2">Select Operator</label>
                 <select name="operator" id="operator" class="form-select" required>
