@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
   <body>
     <div class="container">
         <form action="" method="POST" class="card mt-5 shadow" autocomplete="off">
-            <div class="card-header">PHP Calculator for testing server 01 and server 02 with load bal 1 & 2 </div>
+            <div class="card-header">PHP Calculator for testing server 01 and server 02 with aws load balancer </div>
             <div class="card-body p-4">
                 <label for="numberOne" class="form-label">Number 00101</label>
                 <input type="number" name="numberOne" id="numberOne" class="form-control" required>
